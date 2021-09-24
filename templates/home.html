@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<style>
+        body {
+            background-color: beige;
+        }
+    </style>
+<div class="container">
+    <div align="center" class="bg-info text-dark">
+        {% if user.is_superuser %}
+            <br><br>
+            <h2 class="display-7">Lakeview Apartment Admin</h2>
+
+
+        {% elif user.is_authenticated %}
+            <h2>Welcome to Lakeview Apartments! </h2>
+            <p style="padding-left: 10px; padding-right: 10px">
+                Welcome home to Lakeview Apartment Homes in Omaha, NE.
+                Maintenance requests submitted online will be reviewed and responded to during normal business hours.
+                Please note online maintenance requests are for routine maintenance only. If you are reporting a maintenance emergency, you must call 402-112-1122.
+
+                <b>Due to COVID-19 we kindly request you identify anyone in your home who is quarantined or not feeling well.</b>
+
+                Thank you for submitting your maintenance request online and making Lakeview Apartment Homes your home!<br>
+
+            Below are considered maintenance emergencies:
+            <li>Fire (After calling 911)</li>
+            <li>Flooding</li>
+            <li>Gas leaks</li>
+            <li>Apartment entry door locks not operating properly</li>
+            <li>CO Detectors or fire alarms beeping</li>
+            <li>Detectors and Water Alarms</li>
+            <li>Broken window or window locks</li>
+
+
+
+
+            <form action="" method="post">
+
+
+             </form>
+        {% else %}
+            <div>
+                <br><br>
+
+                <img class="img-fluid" align="center" height="350" width="600" src="{% static "images/img1.PNG" %}"
+                     alt="Logo text2"/>
+                <div><p class="bg-warning text-black">Please <a href="{% url 'signup' %}"><b>register</b></a> or <a
+                        href="{% url 'login' %}"><b>login</b></a> to raise request.</p></div>
+            <p class="p-4" align="left">
+                <b>WELCOME TO RESIDENT SERVICES FOR LAKEVIEW APARTMENTS:- </b>
+                <a class="text-light" href="mailto:gargi.nandy111@gmail.com">lakeviewapartment@gmail.com</a>.
+            </p>
+            </div>
+        {% endif %}
+        <div><br></div>
+    </div>
+    </div>
+{% endblock content %}
+
+</html>

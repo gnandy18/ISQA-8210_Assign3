@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
+{% extends 'base.html' %}
+
+{% block title %}Booking Request Submitted{% endblock title %}
+
+{% block content %}
+{% if sent %}
+   <div class="card" style="padding: 10px 10px 10px">
+    <p>An email has been sent to the email address: <span style="color: blue">{{ email_r }}</span>,
+    The above email address is registered with us. You will receive all the updates of your request in the above mentioned email.
+
+    At anytime you can login in to check the status of your request.</p>
+    {% else %}
+       {{ error }}
+    {% endif %}
+<p>If you have any questions you can reach us by phone: 402-112-1122
+    or email: <a href="mailto:unofpinfo@gmail.com">lakeviewapartment@gmail.com</a>.</p>
+<p>Thank you Lakeview Apartment Staff.</p>
+    </div>
+{% endblock content %}
+</html>

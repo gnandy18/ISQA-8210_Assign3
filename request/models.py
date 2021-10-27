@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.db import models
 
 # Create your models here.
@@ -42,7 +44,7 @@ class Request(models.Model):
 
 
     )
-    request_date = models.DateField(default=timezone.now)
+    request_date = models.DateField(default=datetime.now())
     full_description= models.TextField()
     category_type = models.CharField(max_length=40,
                            choices=Category,

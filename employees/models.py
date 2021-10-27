@@ -7,14 +7,14 @@ from django.utils import timezone
 class Employees(models.Model):
     name = models.CharField(max_length=50)
     address = models.CharField(max_length=200)
-    emp_number = models.IntegerField(blank=False, null=False)
+    emp_number = models.IntegerField(blank=False, null=False, unique=True)
     city = models.CharField(max_length=50)
     state = models.CharField(max_length=50)
     zipcode = models.CharField(max_length=10)
     cell_phone = models.CharField(max_length=50)
     created_date = models.DateTimeField(
         default=timezone.now)
-    updated_date = models.DateTimeField(auto_now_add=True)
+    updated_date = models.DateTimeField(default=timezone.now)
 
     def created(self):
         self.created_date = timezone.now()

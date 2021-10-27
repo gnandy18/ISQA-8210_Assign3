@@ -13,13 +13,20 @@
         </div>
         {% if reqs.count > 0 %}
             <div style="width: 90%">
+
+
             <ul>
-                <li>In case of any queries please contact our office at:
+                <li>To update any request where the 'Status' is <b>In-Progress</b>, please contact our office at:
                     402-554-1900 or email: <a href="mailto:gargi.nandy111@gmail.com">lakeviewapartment@gmail.com</a>.
                 </li>
 
-
+                <li> To update any request where the 'Status' is <b>New</b>, click the 'Delete' button then create
+                    a new request: <a href="{% url 'home' %}">New Request</a>.
+                </li>
             </ul>
+        </div>
+
+
         </div>
             <div class="table-responsive-lg">
             <table class="table table-striped table-bordered table-hover">
@@ -42,7 +49,7 @@
                         <td>{{ req.full_description }}</td>
                         <td>{{ req.status }}</td>
                     {% if req.status != 'Completed' and req.status != 'In-progress' %}
-                        <td><a href="{% url 'req_edit' pk=req.pk %}" class="btn btn-danger">Edit</a></td>
+                        <!--<td><a href="{% url 'req_edit' pk=req.pk %}" class="btn btn-danger">Edit</a></td>-->
                         <td><a href="{% url 'req_delete' pk=req.pk %}"
 
                                onclick="return confirm('Are you sure you want to delete your booking request?')"

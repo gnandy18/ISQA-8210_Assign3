@@ -60,9 +60,15 @@
                          aria-labelledby="userMenu">
                         <a class="dropdown-item" href="{% url 'change_password' %}">Change password</a>
 
+
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'profile_update' %}">
+                            Update Profile</a>
                          <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{% url 'logout' %}">
                             Log Out</a>
+
+
                     </div>
                 </li>
             </ul>

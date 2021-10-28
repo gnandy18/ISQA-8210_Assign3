@@ -133,7 +133,7 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = "unofpinfo@gmail.com"
-EMAIL_HOST_PASSWORD = 'uno@1234'
+EMAIL_HOST_USER = "lakeviewapartment1@gmail.com"
+EMAIL_HOST_PASSWORD = 'Universe@123'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

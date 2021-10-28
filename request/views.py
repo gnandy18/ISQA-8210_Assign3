@@ -32,8 +32,8 @@ def req_new(request):
         subject: str = "Lakeview Apartment Maintainence Request"
         message = f"Your maintainence request has been submitted \nOnce your request is processed you should recieve another email.\n\nThank you, LAM Staff. "
         message2 = f"New maintainence request has been submitted. Please take necessary action."
-        msg1 = (subject, message, 'unofpinfo@gmail.com', [email_r])
-        msg2 = (subject, message2, 'unofpinfo@gmail.com', [adminemail])
+        msg1 = (subject, message, 'lakeviewapartment1@gmail.com', [email_r])
+        msg2 = (subject, message2, 'lakeviewapartment1@gmail.com', [adminemail])
         send_mass_mail((msg1, msg2), fail_silently=False)
         sent = True
 

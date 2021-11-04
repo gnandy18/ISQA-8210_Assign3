@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from .models import *
 from .forms import *
 from django.contrib.auth.decorators import login_required
@@ -6,12 +5,11 @@ from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
 
 
-
 @login_required
 def employee_list(request):
     employee = Employees.objects.filter(created_date__lte=timezone.now())
     return render(request, 'employee_list.html',
-                 {'employees': employee})
+                  {'employees': employee})
 
 
 @login_required
@@ -51,6 +49,3 @@ def employee_edit(request, pk):
         # print("else")
         form = EmployeeForm(instance=employee)
     return render(request, 'employee_edit.html', {'form': form})
-
-
-

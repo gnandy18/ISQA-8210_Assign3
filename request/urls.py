@@ -9,9 +9,6 @@ urlpatterns = [
     path('admin_req_list', views.admin_req_list, name='admin_req_list'),
     path('req_approve/<int:pk>/', views.req_approve, name='req_approve'),
     path('req_delivered/<int:pk>/', views.req_delivered, name='req_delivered'),
-    path('req_edit/<int:pk>', views.req_edit, name='req_edit'),
     path('req_delete/<int:pk>', views.req_delete, name='req_delete'),
-
-
 
 ]

@@ -49,9 +49,7 @@
                         <td>{{ req.full_description }}</td>
                         <td>{{ req.status }}</td>
                     {% if req.status != 'Completed' and req.status != 'In-progress' %}
-                        <!--<td><a href="{% url 'req_edit' pk=req.pk %}" class="btn btn-danger">Edit</a></td>-->
                         <td><a href="{% url 'req_delete' pk=req.pk %}"
-
                                onclick="return confirm('Are you sure you want to delete your booking request?')"
                                class="btn btn-danger">Delete</a></td>
 
